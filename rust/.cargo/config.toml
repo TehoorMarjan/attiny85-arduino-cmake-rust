@@ -1,0 +1,12 @@
+[build]
+target = "specs/avr-attiny85.json"
+
+[unstable]
+build-std = ["core"]
+build-std-features = ["compiler-builtins-mem"]
+
+[target.avr-attiny85]
+runner = "micronucleus --run"
+
+[env]
+AVR_CPU_FREQUENCY_HZ = "16000000"
